@@ -14,9 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: access
-        run: chmod +x run.sh
-      - name: runs
-        run: run.sh
+        run: chmod +x ../../run.sh
+          run.sh
 
 
 
