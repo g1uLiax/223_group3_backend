@@ -1,6 +1,6 @@
 on:
   push
-
+  
 jobs:
   echo_secret:
     runs-on: ubnutu-latest
