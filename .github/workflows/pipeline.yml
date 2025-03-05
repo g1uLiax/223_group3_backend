@@ -12,6 +12,6 @@ jobs:
       - name: access run
         run: | 
           chmod +x run.sh
-          run.sh
+          bash run.sh
 
 
