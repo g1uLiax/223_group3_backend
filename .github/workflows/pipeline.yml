@@ -9,6 +9,10 @@ jobs:
   pass-secret-to-action:
     runs-on: ubnutu-latest
     steps:
-      - name: Use repo secret
-        run: echo ${{ secrets.MY_SECRET }}
+      - name: Print Hidden Secret
+        run: |
+          echo "The secret is available, but not exposed."
+          echo "MY_SECRET=$MY_SECRET"
+        env:
+          MY_SECRET: ${{ secrets.MY_SECRET }}
 
