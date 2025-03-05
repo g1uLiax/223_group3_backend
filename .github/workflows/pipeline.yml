@@ -16,7 +16,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 2222
-          script: echo “Hello World”
           source: run.sh
           target: run.sh
       - name: run script on remote server
