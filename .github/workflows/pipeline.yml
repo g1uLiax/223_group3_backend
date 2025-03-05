@@ -19,7 +19,7 @@ jobs:
           source: run.sh
           target: test/run.sh
       - name: run script on remote server
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v0.1.7
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
