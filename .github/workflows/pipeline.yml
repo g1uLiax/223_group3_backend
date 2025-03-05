@@ -13,5 +13,24 @@ jobs:
         run: | 
           chmod +x run.sh
           bash run.sh
-
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@ master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 2222
+          script: echo “Hello World”
+          source: run.sh
+          target: run.sh
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@ master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 2222
+          run: |
+            chmod +x run.sh
+            bash run.sh
 
