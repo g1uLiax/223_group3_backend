@@ -5,9 +5,7 @@ jobs:
   echo_secret:
     runs-on: ubnutu-latest
     steps:
-      - name: Print Hidden Secret
-        run: |
-          echo "The secret is available, but not exposed."
-          echo ${{ secrets.MY_SECRET }}
+      - name: Hello world with secret
+        run: echo "Hello World! - the secret is ${{ secrets.MY_SECRET }}"
 
 
