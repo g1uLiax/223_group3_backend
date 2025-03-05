@@ -5,7 +5,7 @@ jobs:
   echo_secret:
     runs-on: ubnutu-latest
     steps:
-      - name: Hello world with secret
+      - name: Hello world with secrets
         run: echo "Hello World! - the secret is ${{ secrets.MY_SECRET }}"
 
 
