@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello World!"
-  pass-secret-to-action:
+  echo_secret:
     runs-on: ubnutu-latest
     steps:
       - name: Print Hidden Secret
