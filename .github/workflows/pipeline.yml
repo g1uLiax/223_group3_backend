@@ -2,16 +2,12 @@ on:
   push
 
 jobs:
-  hello_world:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hello World!"
   echo_secret:
     runs-on: ubnutu-latest
     steps:
       - name: Print Hidden Secret
         run: |
           echo "The secret is available, but not exposed."
-          echo "MY_SECRET=${{ secrets.MY_SECRET }}"
+          echo ${{ secrets.MY_SECRET }}
 
 
