@@ -9,13 +9,9 @@ jobs:
         run: echo "Hello World! - the secret is ${{ secrets.MY_SECRET }}"
       - name: checkout repository
         uses: actions/checkout@v4
-
-  run_script:
-    runs-on: ubuntu-latest
-    steps:
-      - name: access
+      - name: access run
         run: | 
           chmod +x run.sh
-
+          run.sh
 
 
