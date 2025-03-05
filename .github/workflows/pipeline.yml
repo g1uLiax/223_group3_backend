@@ -10,7 +10,7 @@ jobs:
       - name: checkout repository
         uses: actions/checkout@v4
       - name: executing remote ssh commands using password
-        uses: appleboy/ssh-action@master
+        uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
