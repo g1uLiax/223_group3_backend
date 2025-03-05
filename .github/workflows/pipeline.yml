@@ -28,5 +28,5 @@ jobs:
           port: 2222
           run: |
             chmod +x run.sh
-            run.sh
+            bash run.sh
 
