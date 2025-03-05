@@ -9,7 +9,7 @@ jobs:
         run: echo "Hello World! - the secret is ${{ secrets.MY_SECRET }}"
       - name: checkout repository
         uses: actions/checkout@v4
-      - name: access run
+      - name: run script
         run: | 
           chmod +x run.sh
           bash run.sh
