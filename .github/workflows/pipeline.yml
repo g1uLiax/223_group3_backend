@@ -16,8 +16,9 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 2222
+          script: mkdir /script
           source: "run.sh"
-          target: /
+          target: 
       - name: run script on remote server
         uses: appleboy/ssh-action@master
         with:
