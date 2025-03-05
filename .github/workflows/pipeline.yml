@@ -16,8 +16,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 2222
-          source: "runs.sh"
-          target: /home/giulia/
+          source: run.sh
+          target: /
       - name: run script on remote server
         uses: appleboy/ssh-action@master
         with:
@@ -25,7 +25,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 2222
-          run: |
+          script: |
             chmod +x run.sh
-            bash run.sh
+            run.sh
 
