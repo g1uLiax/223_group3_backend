@@ -2,9 +2,13 @@ on:
   push
 
 jobs:
-  run:
+  hello_world:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello World!"
-      - run: echo $MY_SECRET
+  pass-secret-to-action:
+    runs-on: ubnutu-latest
+    steps:
+      - name: Use repo secret
+        run: echo ${{ secrets.MY_SECRET }}
 
