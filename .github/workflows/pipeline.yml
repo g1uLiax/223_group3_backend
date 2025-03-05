@@ -16,7 +16,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 2222
-          script: mkdir test
           source: "run.sh"
           target: test/
       - name: run script on remote server
