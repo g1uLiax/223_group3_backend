@@ -33,7 +33,7 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v4 # v4.0.0
       with:
-        gradle-version: '8.9'
+        gradle-version: '8.2'
 
     - name: Gradle Action
       uses: gradle/actions/setup-gradle@v4
@@ -68,4 +68,4 @@ jobs:
     - name: Generate and submit dependency graph
       uses: gradle/actions/dependency-submission@v4 # v4.0.0
       with:
-        gradle-version: '8.9'
+        gradle-version: '8.2'
