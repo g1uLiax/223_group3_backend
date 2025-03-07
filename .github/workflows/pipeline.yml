@@ -13,6 +13,6 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 2222
           script: |
-            script.sh
+            bash script.sh
   
 
