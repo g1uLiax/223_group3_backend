@@ -2,28 +2,17 @@ on:
   push
   
 jobs:
-  echo_secret:
+  upload_server:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello world with secrets
-        run: echo "Hello World! - the secret is ${{ secrets.MY_SECRET }}"
-      - name: checkout repository
-        uses: actions/checkout@v4
-      - name: executing remote ssh commands using password
-        uses: appleboy/scp-action@v0.1.7
+      - name: run script on remote server
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 2222
-          source: run.sh
-          target: test
-#      - name: run script on remote server
-#        uses: appleboy/ssh-action@master
-#        with:
-#          host: ${{ secrets.HOST }}
-#          username: ${{ secrets.USERNAME }}
-#          password: ${{ secrets.PASSWORD }}
-#          port: 2222
-#          script: chmod +x run.sh
+          script: |
+            script.sh
+  
 
