@@ -1,3 +1,4 @@
+name: push new backend version
 
 on:
   workflow_run:
